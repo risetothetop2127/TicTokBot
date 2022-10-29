@@ -122,7 +122,7 @@ if __name__ == "__main__":
             if len(re.findall(r"(\d{18,19})", link)) == 1
             else re.findall(
                 r"(\d{18,19})",
-                requests.head("https://www.tiktok.com/@lil_n_fierce/video/7158699979328998658?is_copy_url=1&is_from_webapp=v1", allow_redirects=True, timeout=5).url
+                requests.head(link, allow_redirects=True, timeout=5).url
             )[0]
         )
     except:
